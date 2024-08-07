@@ -63,11 +63,11 @@ body {
 	color: #3f3f3f;
 	background-color: #0a1c1e;
 	line-height: 1.5em;
-	/* background-image: url('../general/logo.jpg'); */
-	background-image: url('../general/fond_math.jpg');
-	background-size: 100%;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
+	/* background-image: url('../logo.jpg'); */
+	/* background-image: url('../generic.jpg'); */
+	/* background-size: 100%; */
+	/* background-repeat: no-repeat; */
+	/* background-attachment: fixed; */
 	/* background-position: 98%;  */
 	/* background-position: 75% 25%;  */
 }

@@ -4,7 +4,7 @@
 
 <head>
 
-<title>PSI* lyc&eacute;e la Martini&egrave;re Monplaisir, Lyon</title>
+<title>Envoi de fichier</title>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="fr" />
@@ -29,7 +29,7 @@
   
 <div id="maintext">
   
-  <h1>Envoi d'un ds ou d'un exo</h1>
+  <h1>Envoi d'un devoir ou d'un exo</h1>
   
   <?php  
   if (isset($_POST['fichier_envoye']))
@@ -56,15 +56,11 @@
   }
   ?>
   </fieldset>
-  <i>Merci de privil&eacute;gier le format PDF.</i></p>
+  <i>Merci d'utiliser le format PDF.</i></p>
 
   <h2>Pour qui ?</h2>
   <SELECT name="pourQui"> 
     <OPTION value="gh" selected>Guillaume Haberer</OPTION> 
-   <OPTION value="xp">Xavier Pessoles</OPTION>
-   <OPTION value="jnb">Jean-Noël Bernard</OPTION>
-   <OPTION value="madl">Marie-Aude de Langenhagen</OPTION>
-   <OPTION value="ls">Lee Smart</OPTION>
   </SELECT>
   
   <h2>Identit&eacute;</h2>
@@ -83,7 +79,7 @@
   <br />				
   <label for="Quoi"> Quoi : </label><input type="text" name="Quoi1" id="Quoi1"/>
   <br />
-  <label for="Message1"> Message &eacute;ventuel pour le prof : </label><input type="text" name="Message1" id="Message1"/>
+  <label for="Message1"> Message &eacute;ventuel : </label><input type="text" name="Message1" id="Message1"/>
   <br />
   </fieldset>				  
   
@@ -110,51 +106,7 @@
 
   
   <?php //affiche un message en cas de réussite
-  if (isset($messageReussite) AND $_POST['pourQui']=="xp")
-  {
-  echo '<p class="reussite">'.$messageReussite.'</p>';
-  $to      = 'xpessoles+envoifichier@lamartin.fr';
-  $subject = 'envoi fichier';
-  $message = $message1."\r\n \r\n".'Envoi de http://einexau.cluster028.hosting.ovh.net/envoi/upload/xp/'.$fichier;
-  $headers = 'From: xpessoles+envoifichier@lamartin.fr' . "\r\n" .
-  'Reply-To: xpessoles+envoifichier@lamartin.fr' . "\r\n" .
-  'X-Mailer: PHP/'.phpversion();
-  mail($to, $subject, $message, $headers);
-  }
-  elseif (isset($messageReussite) AND $_POST['pourQui']=="jnb")
-  {
-  echo '<p class="reussite">'.$messageReussite.'</p>';
-  $to      = 'jbernard@lamartin.fr';
-  $subject = 'envoi fichier';
-  $message = $message1."\r\n \r\n".'Envoi de http://einexau.cluster028.hosting.ovh.net/envoi/upload/jnb/'.$fichier;
-  $headers = 'From: ghaberer+envoifichier@lamartin.fr' . "\r\n" .
-  'Reply-To: ghaberer+envoifichier@lamartin.fr' . "\r\n" .
-  'X-Mailer: PHP/'.phpversion();
-  mail($to, $subject, $message, $headers);
-  }
-  elseif (isset($messageReussite) AND $_POST['pourQui']=="madl")
-  {
-  echo '<p class="reussite">'.$messageReussite.'</p>';
-  $to      = 'mdelangenhagen@lamartin.fr';
-  $subject = 'envoi fichier';
-  $message = $message1."\r\n \r\n".'Envoi de http://einexau.cluster028.hosting.ovh.net/envoi/upload/madl/'.$fichier;
-  $headers = 'From: ghaberer+envoifichier@lamartin.fr' . "\r\n" .
-  'Reply-To: ghaberer+envoifichier@lamartin.fr' . "\r\n" .
-  'X-Mailer: PHP/'.phpversion();
-  mail($to, $subject, $message, $headers);
-  }
-  elseif (isset($messageReussite) AND $_POST['pourQui']=="ls")
-  {
-  echo '<p class="reussite">'.$messageReussite.'</p>';
-  $to      = 'lsmart@lamartin.fr';
-  $subject = 'envoi fichier';
-  $message = $message1."\r\n \r\n".'Envoi de http://einexau.cluster028.hosting.ovh.net/envoi/upload/ls/'.$fichier;
-  $headers = 'From: ghaberer+envoifichier@lamartin.fr' . "\r\n" .
-  'Reply-To: ghaberer+envoifichier@lamartin.fr' . "\r\n" .
-  'X-Mailer: PHP/'.phpversion();
-  mail($to, $subject, $message, $headers);
-  }
-  elseif (isset($messageReussite) AND $_POST['pourQui']=="gh")
+  if (isset($messageReussite) AND $_POST['pourQui']=="gh")
   {
   echo '<p class="reussite">'.$messageReussite.'</p>';
   $to      = 'ghaberer+envoifichier@lamartin.fr';
